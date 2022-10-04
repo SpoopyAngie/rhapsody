@@ -1,8 +1,25 @@
 # Rhapsody
 **Rhapsody - Another Music Bot for Discord using Discordia (Discord API library)**
 
-### Installation
+### Requirements
 
-- To install Luvit, visit https://luvit.io and follow the instructions provided for your platform.
-- To install Discordia, run `lit install SinisterRectus/discordia` in Rhapsody's directory
-- Run Rhapsody using `luvit init.lua`
+[Luvit](https://luvit.io)
+[Discordia](https://github.com/SinisterRectus/Discordia)
+[FFmpeg](https://github.com/FFmpeg/FFmpeg)
+[opus](https://github.com/xiph/opus)
+[libsodium](https://github.com/jedisct1/libsodium)
+
+### Configuration
+`config.ini`
+```
+[Discord]
+BotToken=<DiscordBotToken>
+[YouTube]
+APIKey=<GoogleAPIKey>
+[Spotify]
+ClientID=<SpotifyClientID>
+ClientSecret=<SpotifyClientSecret>
+```
+
+### Usage
+`luvit init.lua`
