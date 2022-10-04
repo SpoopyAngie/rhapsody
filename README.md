@@ -5,6 +5,7 @@
 
 [Luvit](https://luvit.io)
 [Discordia](https://github.com/SinisterRectus/Discordia)
+[yt-dlp](https://github.com/yt-dlp/yt-dlp)
 [FFmpeg](https://github.com/FFmpeg/FFmpeg)
 [opus](https://github.com/xiph/opus)
 [libsodium](https://github.com/jedisct1/libsodium)

@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  rhapsody:
+    build:
+      context: .
+    container_name: rhapsody
+    restart: unless-stopped
+
+    volumes:
+      - ./config.ini:/root/rhapsody/config.ini
+      - rhapsody-cache:/root/rhapsody/cache
+
+volumes:
+  rhapsody-cache:
