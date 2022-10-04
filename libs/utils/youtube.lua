@@ -79,7 +79,8 @@ youtube.downloadAudio = function(YTVideoID, Callback)
 		assert(
 			uv.spawn(
 				"yt-dlp", {
-					args = {'-f', 'ba', string.format('https://www.youtube.com/watch?v=%s', YTVideoID), '-o', string.format('%s/%%(id)s.%%(ext)s', youtube.AudioDownloadPath)},
+					-- Download audio only with '-f ba'. Isn't available in all YouTube videos
+					args = {string.format('https://www.youtube.com/watch?v=%s', YTVideoID), '-o', string.format('%s/%%(id)s.%%(ext)s', youtube.AudioDownloadPath)},
 					stdio = {StandardInput, StandardOutput, StandardError}
 				},
 				function(Code, Signal)
