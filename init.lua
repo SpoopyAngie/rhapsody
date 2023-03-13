@@ -186,8 +186,8 @@ musicplayer.Commands.playsomething = function(Message, ...)
 		local CacheYTVideoIDs = table.keys(youtube.AudioCache)
 
 		for Index = 1, math.min(NumberOfTracks, 10) do
-			# local CacheYTVideoIDs = table.keys(youtube.AudioCache)
-			# local Track = track(CacheYTVideoIDs[math.random(1, #CacheYTVideoIDs)])
+			-- local CacheYTVideoIDs = table.keys(youtube.AudioCache)
+			-- local Track = track(CacheYTVideoIDs[math.random(1, #CacheYTVideoIDs)])
 
 			local Track = track(table.remove(CacheYTVideoIDs, math.random(1, #CacheYTVideoIDs)))
 
