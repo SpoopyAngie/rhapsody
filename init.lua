@@ -183,12 +183,14 @@ musicplayer.Commands.playsomething = function(Message, ...)
 	
 	if VoiceChannel then
 		local NumberOfTracks = #Arguments and tonumber(Arguments[1]) or 1
-		
+		local CacheYTVideoIDs = table.keys(youtube.AudioCache)
+
 		for Index = 1, math.min(NumberOfTracks, 10) do
-			local CacheYTVideoIDs = table.keys(youtube.AudioCache)
-			
-			local Track = track(CacheYTVideoIDs[math.random(1, #CacheYTVideoIDs)])
-			
+			# local CacheYTVideoIDs = table.keys(youtube.AudioCache)
+			# local Track = track(CacheYTVideoIDs[math.random(1, #CacheYTVideoIDs)])
+
+			local Track = track(table.remove(CacheYTVideoIDs, math.random(1, #CacheYTVideoIDs)))
+
 			if Track then musicplayer.queueTrack(Message, Track, true) end
 		end
 	end
